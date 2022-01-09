@@ -44,7 +44,15 @@
       }
     ],
     "imageResize": true,
-    "uniqCompNum": 1,
+    "favicon": false,
+    "mbrsiteDomain": "lrh9v1vsir",
+    "robotsSwitcher": false,
+    "sitemapSwitcher": false,
+    "sitemapSwitcherAuto": false,
+    "siteUrl": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 3,
     "versionPublish": "5.5.0"
   },
   "pages": {
@@ -788,6 +796,113 @@
             "& when (@bg-type = 'image')": {
               "background-image": "url(@bg-value)"
             },
+            ".mbr-iconfont": {
+              "font-size": "3.5rem",
+              "color": "@iconColor",
+              "padding-right": "2rem",
+              "padding-top": "0.6rem",
+              "display": "block"
+            },
+            ".card": {
+              "-webkit-box-orient": "horizontal",
+              "-webkit-box-direction": "normal",
+              "flex-direction": "row",
+              "-webkit-box-align": "end",
+              "align-items": "flex-end",
+              "-webkit-box-pack": "center",
+              "justify-content": "center"
+            },
+            "h4": {
+              "margin": "0"
+            },
+            "h3": {
+              "margin": "0",
+              "max-height": "60px"
+            },
+            "@media (max-width: 992px)": {
+              ".card": {
+                "padding-bottom": "2rem"
+              }
+            },
+            "@media (max-width: 767px)": {
+              ".card": {
+                "-webkit-box-orient": "vertical",
+                "-webkit-box-direction": "normal",
+                "flex-direction": "column",
+                "-webkit-box-align": "center",
+                "align-items": "center"
+              },
+              ".mbr-iconfont": {
+                "padding-right": "0rem",
+                "text-align": "center",
+                "padding-bottom": "0.5rem"
+              },
+              "h4": {
+                "text-align": "center"
+              }
+            }
+          },
+          "_name": "counters1",
+          "_sourceTheme": "petsm4",
+          "_customHTML": "<section class=\"counters counters1 petsm4_counters1\" group=\"Counters\" plugins=\"ViewportChecker\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"3\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"5\">\n\t\t<select title=\"Items\" name=\"items\">\n\t\t\t<option value=\"1\">1</option>\n\t\t\t<option value=\"2\" selected>2</option>\n\t\t\t<option value=\"3\">3</option>\n\t\t\t<option value=\"4\">4</option>\n\t\t</select>\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n\t\t<input type=\"checkbox\" title=\"Items Title\" name=\"showTitles\" checked>\n\t\t<input type=\"color\" title=\"Icons Color\" name=\"iconColor\" value=\"#296960\">\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\">\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container\">\n\t\t<h2 class=\"mbr-section-title mbr-bold pb-5 align-center mbr-fonts-style\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title\">\n\t\t\tCounters</h2>\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"card col-6 col-md-6 col-lg-3\" mbr-if=\"items > 0\">\n\t\t\t\t<div class=\"card-ico\">\n\t\t\t\t\t<h4 class=\"mbr-content-title mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showTitles\">Registered</h4>\n\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mobi-mbri-align-left mobi-mbri\"></span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-text\">\n\t\t\t\t\t<h3 class=\"count mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-2\">\n\t\t\t\t\t\t843</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card col-6 col-md-6 col-lg-3\" mbr-if=\"items > 1\">\n\t\t\t\t<div class=\"card-ico\">\n\t\t\t\t\t<h4 class=\"mbr-content-title mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showTitles\">Graduated</h4>\n\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbri-cust-feedback\"></span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-text\">\n\t\t\t\t\t<h3 class=\"count mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-2\">\n\t\t\t\t\t\t600</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card col-6 col-md-6 col-lg-3\" mbr-if=\"items > 2\">\n\t\t\t\t<div class=\"card-ico\">\n\t\t\t\t\t<h4 class=\"mbr-content-title mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showTitles\">PLAY DAYS</h4>\n\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbrib-globe-2\"></span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-text\">\n\t\t\t\t\t<h3 class=\"count mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-2\">\n\t\t\t\t\t\t639</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<div class=\"card col-6 col-md-6 col-lg-3\" mbr-if=\"items > 3\">\n\t\t\t\t<div class=\"card-ico\">\n\t\t\t\t\t<h4 class=\"mbr-content-title mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showTitles\">BATHS</h4>\n\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbrib-cloud\"></span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-text\">\n\t\t\t\t\t<h3 class=\"count mbr-semibold mbr-fonts-style\" mbr-theme-style=\"display-2\">\n\t\t\t\t\t\t321</h3>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "sU2ywGdBEG",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "counters1-1"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-iconfont": {
+              "color": "@IconsColor !important",
+              "font-size": "3.5rem !important"
+            },
+            ".card-title, .card-img": {
+              "color": "#ed6436"
+            },
+            "p": {
+              "line-height": "1.7"
+            },
+            "@media (max-width: 992px)": {
+              ".card": {
+                "margin-bottom": "2rem"
+              }
+            },
+            ".card-title, .card-ico": {
+              "color": "#296960"
+            }
+          },
+          "_name": "features5",
+          "_sourceTheme": "petsm4",
+          "_customHTML": "<section class=\"features5 petsm4_features5\" group=\"Features\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n\n\t<mbr-parameters>\n\t\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t\t<header>Size</header>\n\t\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n\t\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\">\n\t\t<select title=\"Cards\" name=\"cardsAmount\">\n\t\t\t<option value=\"1\" selected>1</option>\n\t\t\t<option value=\"2\">2</option>\n\t\t\t<option value=\"3\">3</option>\n\t\t\t<option value=\"4\">4</option>\n\t\t</select>\n\t\t<header>Show / Hide</header>\n\t\t<input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n\t\t<input type=\"checkbox\" title=\"Text\" name=\"showText\">\n\t\t<input type=\"color\" title=\"Icons Color\" name=\"IconsColor\" value=\"#383838\" selected>\n\n\t\t<header>Background</header>\n\t\t<fieldset type=\"background\" name=\"bg\" parallax>\n\t\t\t<input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n\t\t\t<input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n\t\t\t<input type=\"video\" title=\"Video\" value=\"https://www.youtube.com/watch?v=36YgDDJ7XSc\">\n\t\t</fieldset>\n\t\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked condition=\"bg.type !== 'color'\">\n\t\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#efefef\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.9\" condition=\"overlay && bg.type !== 'color'\">\n\t\t<!-- End block parameters -->\n\t</mbr-parameters>\n\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\">\n\t</div>\n\n\t<div class=\"container\">\n\t\t<div class=\"row justify-content-center\">\n\t\t\t<div class=\"card col-12 col-md-6\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                            'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-ico align-left pb-3\">\n\t\t\t\t\t<a href=\"popup:#mbr-popup-0\" data-toggle=\"modal\" data-bs-toggle=\"modal\" data-target=\"#mbr-popup-0\" data-bs-target=\"#mbr-popup-0\"><span mbr-icon class=\"mbr-iconfont mobi-mbri-contact-form mobi-mbri\" style=\"color: rgb(41, 105, 96); fill: rgb(41, 105, 96);\"></span></a>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t<h4 class=\"card-title align-left py-2 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-ico\"><a href=\"popup:#mbr-popup-0\" class=\"text-primary\" data-toggle=\"modal\" data-bs-toggle=\"modal\" data-target=\"#mbr-popup-0\" data-bs-target=\"#mbr-popup-0\">Register Now!</a></h4>\n\t\t\t\t\t<p class=\"mbr-text mbr-regular align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .link\">\n\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget lectus eu ex ornare porta\n\t\t\t\t\t\teuismod a libero. Phasellus vehicula placerat enim at egestas.</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-12 col-md-6\" mbr-if=\"cardsAmount > 1\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                            'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-ico align-left pb-3\">\n\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbrib-home  \"></span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t<h4 class=\"card-title align-left py-2 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-ico\">HAPPY ENVIRONMENT</h4>\n\t\t\t\t\t<p class=\"mbr-text  mbr-regular align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .link\">\n\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget lectus eu ex ornare porta\n\t\t\t\t\t\teuismod a libero. Phasellus vehicula placerat enim at egestas.</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-12 col-md-6\" mbr-if=\"cardsAmount > 2\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                            'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-ico align-left pb-3\">\n\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbrib-protect  \"></span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t<h4 class=\"card-title align-left py-2 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-ico\">WE ARE HERE TO STAY</h4>\n\t\t\t\t\t<p class=\"mbr-text  mbr-regular align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .link\">\n\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget lectus eu ex ornare porta\n\t\t\t\t\t\teuismod a libero. Phasellus vehicula placerat enim at egestas.</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"card col-12 col-md-6\" mbr-if=\"cardsAmount > 3\" mbr-class=\"{'col-lg-3': cardsAmount == '4',\n                            'col-lg-4': cardsAmount == '3'}\">\n\t\t\t\t<div class=\"card-ico align-left pb-3\">\n\t\t\t\t\t<span mbr-icon class=\"mbr-iconfont mbrib-github  \"></span>\n\t\t\t\t</div>\n\t\t\t\t<div class=\"card-box\">\n\t\t\t\t\t<h4 class=\"card-title align-left py-2 mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-ico\">OUR EMPLOYEES CARE</h4>\n\t\t\t\t\t<p class=\"mbr-text  mbr-regular align-left mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .link\">\n\t\t\t\t\t\tLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget lectus eu ex ornare porta\n\t\t\t\t\t\teuismod a libero. Phasellus vehicula placerat enim at egestas.</p>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "sU2zkfrsj7",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "features5-2"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
             ".card-wrapper": {
               "img": {
                 "width": "100%",
@@ -971,7 +1086,7 @@
             }
           },
           "_name": "footer1",
-          "_customHTML": "<section group=\"Footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background5.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ed6436\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">\n                    © Copyright 2022 MMIC</p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section group=\"Footers\" mbr-class=\"{'mbr-reveal': reveal, 'mbr-parallax-background': bg.parallax}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\">\n        <input type=\"checkbox\" title=\"Reveal effect\" name=\"reveal\">\n        <fieldset type=\"background\" name=\"bg\" parallax>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background5.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#296960\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#232323\" condition=\"overlay && bg.type !== 'color'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.8\" condition=\"overlay && bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"media-container-row align-center mbr-white\">\n            <div class=\"col-12\">\n                <p class=\"mbr-text mb-0 mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".media-container-row .mbr-text\" data-app-placeholder=\"Type Text\">\n                    © Copyright 2022 MMIC</p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_anchor": "footer1-g",
           "_isUserblock": true,
           "_sourceTheme": "petsm4",
